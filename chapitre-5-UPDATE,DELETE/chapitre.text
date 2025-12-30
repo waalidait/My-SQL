@@ -1,0 +1,28 @@
+UPDATE et DELETE permet de modifier et supprimer des données dans une table SQL en toute sécurité, avec des conditions précises.
+
+  - Concepts abordés (explication)
+
+°Commande UPDATE
+Elle permet de modifier une ou plusieurs valeurs dans une table existante.
+
+°Commande DELETE
+Elle sert à supprimer des enregistrements d’une table.
+
+°Clause WHERE (obligatoire)
+Elle permet de cibler exactement les lignes concernées.
+Sans WHERE, toutes les lignes peuvent être modifiées ou supprimées ❌.
+
+°Mise à jour d’un ou plusieurs champs
+Avec UPDATE, on peut changer un seul champ ou plusieurs champs en même temps.
+
+°Suppression conditionnelle ou totale
+
+--Avec WHERE → suppression ciblée
+
+--Sans WHERE → suppression de toute la table (à éviter)
+
+°Précautions avant suppression
+
+--Vérifier la condition avec un SELECT
+
+--Faire une sauvegarde avant un DELETE

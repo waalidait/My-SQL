@@ -1,0 +1,18 @@
+INSERT INTO pemet d’ajouter de nouvelles données dans une table SQL, tout en respectant la structure de la table et les contraintes (clés, types, valeurs obligatoires).
+
+  - Concepts abordés
+
+°Syntaxe de INSERT INTO
+Permet d’insérer une ou plusieurs lignes dans une table.
+
+°Insertion complète
+Insertion de valeurs pour toutes les colonnes de la table, dans le bon ordre.
+
+°Insertion partielle
+Insertion de valeurs uniquement pour certaines colonnes, les autres prennent leurs valeurs par défaut.
+
+°Valeurs par défaut et AUTO_INCREMENT
+Les colonnes AUTO_INCREMENT se remplissent automatiquement sans être précisées dans la requête.
+
+°Insertion multiple
+Possibilité d’insérer plusieurs lignes en une seule requête pour gagner du temps.

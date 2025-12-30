@@ -1,0 +1,14 @@
+ /*1) L'instruction GROUP BY de MySQL :
+
+GROUP BY : instruction regroupe les lignes ayant les mêmes valeurs en lignes récapitulatives, est souvent utilisée avec des fonctions d'agrégation ( COUNT(), MAX(), MIN(), SUM(), AVG()) pour regrouper l'ensemble de résultats par une ou plusieurs colonnes.
+{SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);}
+
+2) GROUP BY avec JOIN :
+
+{SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;}*/

@@ -1,0 +1,21 @@
+à l’aide des jointures SQL on peut relier plusieurs tables d’une base de données, afin d’afficher des informations provenant de différentes tables dans une seule requête.
+
+   - Concepts abordés
+
+° Principe des jointures
+Les jointures permettent de combiner des données de plusieurs tables en utilisant une clé commune (souvent une clé étrangère).
+
+° INNER JOIN
+Affiche uniquement les enregistrements qui ont une correspondance dans les deux tables.
+
+° LEFT JOIN
+Affiche tous les enregistrements de la table de gauche, même s’il n’y a pas de correspondance dans la table de droite.
+
+° RIGHT JOIN
+Affiche tous les enregistrements de la table de droite, même s’il n’y a pas de correspondance dans la table de gauche.
+
+° Alias de tables
+Permettent de donner des noms courts aux tables pour rendre les requêtes plus lisibles et plus simples.
+
+° Filtrage après jointure
+Utilisation de la clause WHERE pour filtrer les résultats obtenus après la jointure.

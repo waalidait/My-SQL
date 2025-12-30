@@ -1,0 +1,13 @@
+En combinant plusieurs commandes (SELECT, INSERT, UPDATE, DELETE) on peut apprendre à écrire des requêtes SQL efficaces, organisées et sécurisées, , tout en respectant les bonnes pratiques pour éviter les erreurs et la perte de données.
+
+  -- Concepts abordés
+
+°Requêtes combinées
+Utilisation de plusieurs instructions SQL dans un même script pour gérer les données (lecture, insertion, modification, suppression).
+
+°Transactions SQL
+Permettent de regrouper plusieurs requêtes :
+
+-START TRANSACTION : début
+
+-COMMIT : valider les changements

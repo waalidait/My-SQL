@@ -1,0 +1,39 @@
+1) SELECT :
+
+ SELECT : instruction permet de sélectionner des données dans une base de données.
+    
+    -L'instruction SQL suivante sélectionne les colonnes d'une table : {SELECT column1, column2, ... FROM table_name;}
+    -La requête SQL suivante sélectionne TOUTES les colonnes d'une table {SELECT * FROM table_name;}
+    -L'instruction SELECT DISTINCT : 
+        ° permet de ne renvoyer que des valeurs différentes, {SELECT DISTINCT column1, column2, ...
+          FROM table_name;}
+        ° L'instruction SQL suivante compte et renvoie le nombre des valeurs différentes {SELECT COUNT(DISTINCT valeur) FROM Table_name;}
+
+
+2) Clause WHERE MySQL :
+ 
+ WHERE clause : sert à filtrer les enregistrements, il sert à extraire uniquement les enregistrements qui remplissent une condition spécifiée.
+ {SELECT column1, column2, ... FROM table_name
+  WHERE condition;}
+
+    -Champs de texte vs. champs numériques : SQL exige que les valeurs textuelles soient entourées de guillemets simples, Toutefois, les champs numériques ne doivent pas être placés entre guillemets.{SELECT * FROM Customers
+      WHERE CustomerID = 1;}
+
+      ° Les opérateurs dans la clause WHERE :
+      - Equal	=
+	  - Greater than >	
+	  - Less than <	
+	  - Greater than or equal	>=
+	  - Less than or equal	<=
+	  - Not equal<>. Note : In some versions of SQL this operator may be written as !=	
+      - BETWEEN	: Between a certain range	
+      - LIKE : Search for a pattern	
+      - IN : To specify multiple possible values for a column
+
+
+3) MySQL ORDER BY Mot-clé :
+
+ ORDER BY : mot-clé permet de trier les résultats par ordre croissant ou décroissant, Pour les trier par ordre décroissant, utilisez le DESCmot-clé.{SELECT column1, column2, ...
+ FROM table_name
+ ORDER BY column1, column2, ... ASC|DESC;}
+ 
