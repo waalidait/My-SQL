@@ -1,0 +1,104 @@
+MCD – Modèle Conceptuel de Données (MERISE)
+🔹 Entités
+UTILISATEUR
+
+id_utilisateur
+
+nom
+
+email
+
+mot_de_passe
+
+ARTICLE
+
+id_article
+
+titre
+
+contenu
+
+image
+
+date_publication
+
+COMMENTAIRE
+
+id_commentaire
+
+contenu
+
+date_commentaire
+
+🔹 Relations et cardinalités
+1️ UTILISATEUR — écrit — ARTICLE
+
+Un utilisateur peut écrire plusieurs articles.
+
+Un article est écrit par un seul utilisateur.
+
+Cardinalités :
+
+UTILISATEUR (1,N)
+
+ARTICLE (1,1)
+
+2️ ARTICLE — reçoit — COMMENTAIRE
+
+Un article peut recevoir plusieurs commentaires.
+
+Un commentaire est lié à un seul article.
+
+Cardinalités :
+
+ARTICLE (1,N)
+
+COMMENTAIRE (1,1)
+
+3️ UTILISATEUR — écrit — COMMENTAIRE
+
+Un utilisateur peut écrire plusieurs commentaires.
+
+Un commentaire est écrit par un seul utilisateur.
+
+Cardinalités :
+
+UTILISATEUR (1,N)
+
+COMMENTAIRE (1,1)
+
+ Rapports et manipulations SQL – Blog
+🔹 Description générale
+
+Ce rapport présente plusieurs requêtes SQL permettant de répondre à des questions métiers courantes dans le contexte d’un blog, telles que :
+
+Identifier les utilisateurs qui ont rédigé des articles
+
+Calculer le nombre de commentaires par article
+
+Afficher les articles les plus récents
+
+Lister les articles d’un utilisateur donné
+
+Gérer et supprimer certains commentaires
+
+🔹 Requête 1 : Liste des articles avec leurs auteurs
+SELECT A.titre, U.nom
+FROM Article A
+JOIN Utilisateur U
+ON A.id_utilisateur = U.id_utilisateur;
+
+
+Explication :
+Cette requête permet d’afficher chaque article accompagné du nom de l’utilisateur qui l’a écrit, grâce à une jointure entre les tables Article et Utilisateur.
+
+🔹 Requête 2 : Nombre de commentaires par article
+SELECT A.titre, COUNT(C.id_commentaire) AS nombre_commentaires
+FROM Article A
+LEFT JOIN Commentaire C
+ON A.id_article = C.id_article
+GROUP BY A.id_article;
+
+
+Explication :
+Cette requête calcule le nombre total de commentaires pour chaque article, y compris les articles sans commentaires grâce à la jointure LEFT JOIN.
